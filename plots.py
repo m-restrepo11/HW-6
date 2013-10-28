@@ -12,8 +12,7 @@ Output: numpy array con todos los datos.
 """
 def cargar_datos(file):
  
-    #Carga los datos del archivo de entrada en dos arrays, uno con posición en X
-    #y otro con posición en Y.
+    #Carga los datos del archivo de entrada en dos arrays, uno con posición en X y otro con posición en Y.
     pos_x= np.loadtxt(file, unpack=True, usecols=[1])
     pos_y = np.loadtxt(file, unpack=True, usecols=[2])
    
@@ -36,9 +35,9 @@ def make_plot(x, y):
     plt.axes().set_aspect('equal', 'datalim')
     plt.savefig('gráfica1.png')
     
-#Defines the input file
-input_filename = 'condiciones_iniciales.dat'
-x,y= cargar_datos(input_filename)
+#Nombre del archivo para graficar.
+filename = 'condiciones_iniciales.dat'
+x,y= cargar_datos(filename)
     
-cargar_datos(input_filename)
+cargar_datos(filename)
 make_plot(x, y)
