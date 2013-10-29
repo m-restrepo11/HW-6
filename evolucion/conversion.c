@@ -1,10 +1,13 @@
 /*
- /*
  * conversion.c
  *
  *  Creado  el: 22/10/2013
  *      Autores: Mateo Restrepo - Mateo Jimenez
+ *
+ *      Programa que contiene el valor de constantes necesarias para la ejecución de los demás códigos
+ *      y  hace cambio a las unidades de trabajo en los demás códigos.
  */
+
 #include <stdio.h>
 #include <math.h>
 #define PARSEC 30000000000000000.0
@@ -20,7 +23,7 @@ double Kpc_m(double value);
 
 // Retorna el valor de la constante de gravitación en Kpc, G-año, Tera-Masa solar.
 double  G_const(){
-
+	
 	return(4.46391e-6);
 }
 
@@ -32,13 +35,13 @@ double  PI(){
 
 //Convierte km/s a Kpc/G-año.
 double Kms_KpcGyr(double value){
-
+	
 	return(value*1.022);
 }
 
 //Convierte Kpc/G-año a km/s.
 double KpcGyr_Kms(double value){
-
+	
 	return(value*0.9785);
 }
 
@@ -64,3 +67,6 @@ double m_Kpc(double value){
 	return((value)*(3.241)*(pow(10,-20)));
 
 }
+
+
+
