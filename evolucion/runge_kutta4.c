@@ -6,6 +6,7 @@
  *
  *        Programa que realiza las rutinasd de Integración númerica de Runge-Kutta de cuarto orden.
  *        Durante el código se trabaja con unidades de Kiloparsecs, Giga-años, Tera-masas solares.
+ *	  Revcibe el arreglo de condiciones iniciales desde evolve.c
  *        Devuelve arreglos de posiciones y velocidades en intervalos de 10^9 años.
  */
 
@@ -66,7 +67,7 @@ double  rungekutta(double *MatrizCondiciones)
   x0=X[0];
   y0=Y[0];
   v0x=Vx[0];
-  v0y=Vy[0];
+ v0y=Vy[0];
   t0=0;
 
     //Método Runge-Kutta : ATENCIÓN en este método se calcula las posiciones y con estas se calculan las velocidades.
@@ -74,6 +75,7 @@ double  rungekutta(double *MatrizCondiciones)
     {
       for(j=1;j<largoArchivo;j++)
 	{
+		
 	  //Este es el Runge-Kutta para encontrar la posicion en X de la estrella.
 	  k[i][1]=h*funcionVel(t0,x0,v0x);
 	  printf(" %lf ", k[i][1]);
@@ -115,17 +117,22 @@ double  rungekutta(double *MatrizCondiciones)
 	  vy=v0y+k[i][5];
 	  
 	  //se organiza para la siguiente interación.
-	  t=t0+h;
+	  t=t0+h;// Este paso deberia hacerse cuando todas las posiciones esten actualizadas en el tiempo t+ delta t.
 	  F[i+j][1]=x;
 	  F[i+j][2]=y;
 	  F[i+j][3]=vx;
 	  F[i+j][4]=vy;
 	  F[i+j][5]=t;
+	// Falta hacer un arreglo que modifique las condiciones iniciales. Importante corregir pues el Runge-Kutta solo avaanza cuando todas las masas avancen.
+
+	  /* 
+	  * Debe ser revisada la posicón de esto dentro de la rutina Runge-Kutta para asegurar que se avance en el paso solamente cuando todas las posiciones y velocidades de las masas hayan sido actualizadas.
 	  t0=t;
 	  x0=x;
 	  y0=t;
 	  v0x=x;
 	  v0y=t;
+	*/
 	}
     }
     // permite imprimir los resultados (este metodo a conitnuacion solo sirve para verficar los resultados del runge kutta.

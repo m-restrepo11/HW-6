@@ -24,7 +24,7 @@ int  main()
 
   //Se llama al metodo Runge-Kutta de cuarto orden llama y con las condiciones iniciales se inicia la rutina modificando las posiciones de las estrellas.
 
-  //Ordenar los arrays que arroja el Runge-Kutta en un archivo de tal forma que se puede graficar
+  //Dividir y Ordenar el array que arroja el Runge-Kutta con las posiciones y velocidades cada 10^9 años en un 5 archivos de tal forma que se puede graficar.
 
 
     return 28;
