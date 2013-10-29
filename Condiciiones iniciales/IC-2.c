@@ -78,7 +78,7 @@ int main(int argc, char **argv) {
 		y_array[i] = y0 + radio*sin(angulo*j);
 		vx_array[i] = v_x0 + v_tan*sin(angulo*j);
 		vy_array[i] = v_y0 + v_tan*cos(angulo*j);
-		fprintf(datos, "%d %f %f %f %f \n", i+100, x_array[i], y_array[i], vx_array[i], vy_array[i]);
+		fprintf(datos, "%d %f %f %f %f \n", i+120, x_array[i], y_array[i], vx_array[i], vy_array[i]);
 		j++;
 	}
 	fclose(datos);
@@ -96,7 +96,7 @@ int main(int argc, char **argv) {
 		y_array[i] = y0 + radio*sin(angulo*j);
 		vx_array[i] = v_x0 + v_tan*sin(angulo*j);
 		vy_array[i] = v_y0 + v_tan*cos(angulo*j);
-		fprintf(datos, "%d %f %f %f %f \n", i+100, x_array[i], y_array[i], vx_array[i], vy_array[i]);
+		fprintf(datos, "%d %f %f %f %f \n", i+120, x_array[i], y_array[i], vx_array[i], vy_array[i]);
 		j++;
 	}
 	fclose(datos);
@@ -114,7 +114,7 @@ int main(int argc, char **argv) {
 		y_array[i] = y0 + radio*sin(angulo*j);
 		vx_array[i] = v_x0 + v_tan*sin(angulo*j);
 		vy_array[i] = v_y0 + v_tan*cos(angulo*j);
-		fprintf(datos, "%d %f %f %f %f \n", i+100, x_array[i], y_array[i], vx_array[i], vy_array[i]);
+		fprintf(datos, "%d %f %f %f %f \n", i+120, x_array[i], y_array[i], vx_array[i], vy_array[i]);
 		j++;
 	}
 	fclose(datos);
@@ -132,7 +132,7 @@ int main(int argc, char **argv) {
 		y_array[i] = y0 + radio*sin(angulo*j);
 		vx_array[i] = v_x0 + v_tan*sin(angulo*j);
 		vy_array[i] = v_y0 + v_tan*cos(angulo*j);
-		fprintf(datos, "%d %f %f %f %f \n", i+100, x_array[i], y_array[i], vx_array[i], vy_array[i]);
+		fprintf(datos, "%d %f %f %f %f \n", i+120, x_array[i], y_array[i], vx_array[i], vy_array[i]);
 		j++;
 	}
 	fclose(datos);
@@ -150,7 +150,7 @@ int main(int argc, char **argv) {
 		y_array[i] = y0 + radio*sin(angulo*i);
 		vx_array[i] = v_x0 + v_tan*sin(angulo*i);
 		vy_array[i] = v_y0 + v_tan*cos(angulo*i);
-		fprintf(datos, "%d %f %f %f %f \n", i+100, x_array[i], y_array[i], vx_array[i], vy_array[i]);
+		fprintf(datos, "%d %f %f %f %f \n", i+120, x_array[i], y_array[i], vx_array[i], vy_array[i]);
 		j++;
 	}
 	fclose(datos);
