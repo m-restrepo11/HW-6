@@ -1,28 +1,32 @@
+/*
+ * evolve.c
+ *
+ *	Creado el: 28/10/2013
+ *        Autores: Mateo Restrepo - Mateo Jimenez
+ *
+ *        Programa que evoluciona el estado dinámico de las galaxias usando la rutina Runge-Kutta de cuarto orden.
+ *        Durante el código se trabaja con unidades de Kiloparsecs, Giga-años, Tera-masas solares.
+ *        Recibe el arreglo de condiciones iniciales condiciones_iniciales.dat
+ *        Devuelve 5 archivos con posiciones y velocidades de las estrellas cada 10^9 años.
+ */
+
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>
 #include "runge_kutta4.h"
-#include "IC1.h"
 
-// este metodo permite crear arreglos que se grafican con una posicion X y Y y una velocidad Vx y VY para cada masa en diferentes tiempos.
+
+//Este método permite crear arreglos que se graficarán con una posicion X y Y y una velocidad Vx y VY para cada estrella en diferentes tiempos.
 int  main()
 {
   int i,largoArchivo;
   largoArchivo= 120;
 
-  // se llama al metodo runge kutta de cuarto orden llama el metodo de condiciones iniciales y los modifica con el runge kutta, despues de hacer este procedimiento el runge kutta arroja un arreglo de 5 columnas y 120*h filas.
+  //Se llama al metodo Runge-Kutta de cuarto orden llama y con las condiciones iniciales se inicia la rutina modificando las posiciones de las estrellas.
 
-  //ordenar el archivo de tal forma que se puede graficar 
-
-  // se llama al metodo graficador de python para ver como cambia la posicion de la particula.
-
-  //despues de esto se cree una nueva galaxia, llamando de nuevo el metodo condiciones iniciales 
-
-  // se hace el metodo concatenar para tener en cuenta el efecto de ambos centros de masa en el espacio 
+  //Ordenar los arrays que arroja el Runge-Kutta en un archivo de tal forma que se puede graficar
 
 
-  //se vuelve a hacer le procedimiento anterior (runge kutta, ordenar y graficar )
-
-    return 0;
+    return 28;
    
 }
