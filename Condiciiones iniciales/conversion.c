@@ -3,7 +3,11 @@
  *
  *  Creado  el: 22/10/2013
  *      Autores: Mateo Restrepo - Mateo Jimenez
+ *
+ *      Programa que contiene el valor de constantes necesarias para la ejecución de los demás códigos
+ *      y  hace cambio a las unidades de trabajo en los demás códigos.
  */
+
 #include <stdio.h>
 #include <math.h>
 #define PARSEC 30000000000000000.0
